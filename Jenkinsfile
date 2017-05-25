@@ -11,7 +11,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("lhudson/helloworld").inside("--volume=/var/run/docker.sock:/var/run/docker.sock")
+        app = docker.build("lhudson/helloworld")
     }
 
     stage('Test image') {

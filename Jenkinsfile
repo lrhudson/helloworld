@@ -37,7 +37,7 @@ node {
     
     stage('Host image') {
         
-        echo "Build RESULT: ${currentBuild.result}"
+        /*echo "Build RESULT: ${currentBuild.result}"*/
         echo "Stage RESULT: ${currentStage.result}"
 
         /* Finally, we'll host the image on our EC2 */

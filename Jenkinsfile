@@ -38,6 +38,5 @@ node {
     stage('Host image') {
         /* Finally, we'll host the image on our EC2 */
         sh 'sudo docker run helloworld'
-        }
     }
 }

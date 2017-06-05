@@ -38,7 +38,7 @@ node {
     stage('Host image') {
         
         /*echo "Build RESULT: ${currentBuild.result}"*/
-        echo "Stage RESULT: ${currentStage.status}"
+        currentStage.result =  'SUCCESS'
 
         /* Finally, we'll host the image on our EC2 */
         sh 'sudo docker run -p 80:80 lhudson/helloworld'

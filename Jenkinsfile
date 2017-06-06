@@ -41,6 +41,6 @@ node {
         /* This line removes any running container */
         /*sh "sudo docker ps -a | awk '{ print $1, $2 }' | grep lhudson/helloworld | awk '{print $1}' | xargs -I {} docker rm {} -f"*/
 
-        sh 'sudo docker run -d -p 80:80 lhudson/helloworld'
+        sh 'docker run -d -p 80:80 lhudson/helloworld'
     }
 }

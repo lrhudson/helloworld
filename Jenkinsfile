@@ -39,7 +39,7 @@ node {
         /* Finally, we'll host the image on our EC2 */
         
         /* This line removes any running container */
-        /*sh "sudo docker ps -a | awk '{ print $1, $2 }' | grep lhudson/helloworld | awk '{print $1}' | xargs -I {} docker rm {} -f"*/
+        sh "docker ps -a | awk '{ print $1, $2 }' | grep lhudson/helloworld | awk '{print $1}' | xargs -I {} docker rm {} -f"
 
         sh 'docker run -d -p 80:80 lhudson/helloworld'
     }
